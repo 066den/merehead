@@ -9,7 +9,7 @@ import AppRouter from '../AppRouter';
 const App: FC = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename={process.env.PUBLIC_URL || '/'}>
         <CssBaseline />
         <AppLayout>
           <AppRouter />
